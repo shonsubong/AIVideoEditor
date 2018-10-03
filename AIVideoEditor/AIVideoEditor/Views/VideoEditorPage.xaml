@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AIVideoEditor.Views.VideoEditorPage"
+             xmlns:vm="clr-namespace:AIVideoEditor.ViewModels"
+             xmlns:views="clr-namespace:AIVideoEditor.Views"
+             xmlns:ef="clr-namespace:AIVideoEditor.Effect"
+             Title="{Binding Title}" BackgroundColor="WhiteSmoke">
+    <ContentPage.BindingContext>
+        <vm:VideoEditorViewModel />
+    </ContentPage.BindingContext>    
+    <ContentPage.Content>
+        <Grid Margin="0">
+            <Grid.RowDefinitions>                
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Frame Margin="0,0" Grid.Row="0" Grid.Column="0" HasShadow="False" OutlineColor="Gray"
+                         WidthRequest="600" MinimumHeightRequest="100"
+                         BackgroundColor="White">
+                <StackLayout Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="20" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="프로젝트 라이브러리" TextColor="Black"/>
+                        <Button Grid.Column="1" Text="  " BackgroundColor="White"/>
+                    </Grid>                    
+                    <views:VideoClipLibraryView/>
+                </StackLayout>                
+            </Frame>
+
+            <Frame Grid.Row="0" Grid.Column="1">
+                <StackLayout Orientation="Vertical">
+                    <Label Text="비디오 프리뷰"/>
+                    <views:VideoPreViewPlayView/>
+                </StackLayout>                
+            </Frame>
+
+            <Frame Margin="0,10" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                         HeightRequest="200"
+                         MinimumHeightRequest="100"
+                         BackgroundColor="White">
+                <StackLayout Orientation="Vertical">
+                    <Label Text="스토리 보드"/>
+                    <views:VideoStoryBoardView/>
+                </StackLayout>                
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

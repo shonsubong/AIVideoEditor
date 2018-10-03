@@ -5,10 +5,14 @@
     <Application.Resources>
         <ResourceDictionary>
             <!--Global Styles-->
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <!--<Color x:Key="NavigationPrimary">#2196F3</Color>-->
+
+            <!--SystemControlPageBackgroundChromeLowBrush-->
+            <Color x:Key="NavigationPrimary">#FFF2F2F2</Color>
+            
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="WhiteSmoke" />
+                <Setter Property="BarTextColor" Value="Black" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
