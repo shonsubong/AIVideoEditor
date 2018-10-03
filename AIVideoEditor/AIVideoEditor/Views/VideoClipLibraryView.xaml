@@ -4,7 +4,7 @@
              x:Class="AIVideoEditor.Views.VideoClipLibraryView">
   <ContentView.Content>
       <StackLayout>
-          <Label Text="Hello Video Clip Library!" />
+          <Label Text="Hello Video Clip Library !" />
       </StackLayout>
   </ContentView.Content>
 </ContentView>
